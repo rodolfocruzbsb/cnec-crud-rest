@@ -84,7 +84,7 @@ public class AlunoRestController {
 	}
 
 	@PutMapping(value = "/{id}")
-	public ResponseEntity<?> updateAluno(@PathVariable("id") long id, @RequestBody Aluno user) {
+	public ResponseEntity<?> atualizarAluno(@PathVariable("id") long id, @RequestBody Aluno user) {
 
 		logger.info("Atualizando Aluno com id {}", id);
 
