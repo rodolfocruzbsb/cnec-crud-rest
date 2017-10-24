@@ -46,7 +46,7 @@ public class AlunoRestController {
 	}
 
 	@GetMapping(value = "/{id}")
-	public ResponseEntity<?> getAluno(@PathVariable("id") long id) {
+	public ResponseEntity<?> buscarAlunoPorId(@PathVariable("id") long id) {
 
 		logger.info("Buscando Aluno com id {}", id);
 
