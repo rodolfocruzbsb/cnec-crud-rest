@@ -1,5 +1,6 @@
 package br.cnec.aula10.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -56,5 +57,11 @@ public class AlunoServiceImpl implements AlunoService {
 	public boolean existe(Aluno user) {
 
 		return user != null && !this.buscarPorNome(user.getNome()).isEmpty();
+	}
+
+	@Override
+	public List<Aluno> buscarPorPrefixo(String prefix) {
+
+		return prefix != null ? repository.findByPrefix(prefix.toUpperCase()) : new ArrayList<>();
 	}
 }

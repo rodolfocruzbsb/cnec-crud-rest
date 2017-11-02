@@ -14,6 +14,8 @@ public interface AlunoService {
 
 	List<Aluno> buscarTodos();
 
+	List<Aluno> buscarPorPrefixo(String prefix);
+
 	Aluno buscarPorId(Long id);
 
 	boolean existe(Aluno user);
